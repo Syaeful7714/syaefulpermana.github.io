@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Massage For You</title>
+  <link rel="stylesheet" href="css/style2.css">
+  
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+        <h3 class="card-title" id="nameHeading">Mau Ngapain Lu!</h3>
+        <div class="card-content">
+          <div class="button-container">
+            <button id="yesBtn">Mau Liat Videonya</button>
+            <button id="noBtn">Kepo Amat Lu!!</button>
+          </div>
+        </div>
+    </div>
+</div>    
+
+  <script>
+    function getNameFromURL() {
+      var urlParams = new URLSearchParams(window.location.search);
+      var name = urlParams.get('name');
+      if (name) {
+        document.getElementById("nameHeading").textContent = "Mau Ngapain Lu, " + name + "!";
+      }
+    }
+
+    getNameFromURL();
+    document.getElementById("yesBtn").addEventListener("click", function() {
+    window.location.href = "file1.html";
+  });
+  
+  document.getElementById("noBtn").addEventListener("click", function() {
+    window.location.href = "file2.html";
+  });
+  
+  </script>
+</body>
+</html>

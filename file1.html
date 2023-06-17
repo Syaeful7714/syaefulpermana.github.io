@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Massage For You</title>
+  <link rel="stylesheet" href="css/style31.css">
+  
+</head>
+<body>
+  <div class="card">
+    <div class="card-title">
+      <h2>Penasaran Banget Nih?!!!</h2>
+      <p>Yaudah, ati-ati jangan klik tombol "Kagak" ok :D</p>
+    </div>
+    <div class="buttons-container">
+      <button class="button">Iyaa</button>
+      <button class="button move" onclick="moveButton()">Kagak</button>
+    </div>
+  </div>
+
+  <script>
+     function moveButton() {
+      var button2 = document.querySelector('.buttons-container .button:last-child');
+      var card = document.querySelector('.card');
+      var cardRect = card.getBoundingClientRect();
+
+      var maxMovementX = cardRect.width - 100;
+      var maxMovementY = cardRect.height - 40;
+
+      var newPositionX = getRandomInt(0, maxMovementX);
+      var newPositionY = getRandomInt(0, maxMovementY);
+
+      button2.style.transform = `translate(${newPositionX}px, ${newPositionY}px)`;
+      button2.classList.remove('move');
+
+      // Display an alert when the button is clicked
+      alert('Awas Tombolnya Ilang!!');
+    }
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    document.querySelector('.button').addEventListener("click", function() {
+    window.location.href = "indexend.html";
+  });
+  
+  </script>
+</body>
+</html>
