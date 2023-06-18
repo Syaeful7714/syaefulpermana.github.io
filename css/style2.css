@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+*, html, body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: grey;
+  }
+  
+  .card {
+    width: 320px;
+    height: 225px;
+    border: 1px solid #23272a;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #000000;
+  }
+  
+  .card-title {
+    margin: 0;
+    font-size: 35px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-container button {
+    width: 300px;
+    height: 40px;
+    margin: 5px;
+    border: none;
+    background-color: #3366cc;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #yesBtn {
+    padding: 8px 16px;
+    background-color: #2c2f33;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #yesBtn:hover {
+    background-color: #5865f2;
+  }
+
+  #noBtn {
+    padding: 8px 16px;
+    background-color: #2c2f33;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #noBtn:hover {
+    background-color: #5865f2;
+  }
